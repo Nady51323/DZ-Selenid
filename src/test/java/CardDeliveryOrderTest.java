@@ -1,7 +1,5 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
@@ -14,11 +12,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class CardDeliveryOrderTest {
-
-    @BeforeAll
-    static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
-    }
 
     public String generateDate(int days) {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
@@ -43,3 +36,4 @@ public class CardDeliveryOrderTest {
 
 
 }
+
